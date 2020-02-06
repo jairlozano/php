@@ -12,6 +12,12 @@ $jobs = [
 		'title' => 'DevOps'
 	]
 ];
+$var1 = 1;
+if($var1 > 2) {
+	echo 'Es mayor que 2';
+} else {
+	echo "$var1 no es mayor que 2";
+}
 ?>
 <!doctype html>
 <html lang="en">
