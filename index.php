@@ -69,7 +69,8 @@ $jobs = [
           <h3 class="border-bottom-gray" >Work Experience</h3>
 	  <ul>
 	    <?php
-		for($idx = 0;$idx < 3;$idx = $idx + 1) {
+		for($idx = 0;$idx < count($jobs);$idx++) {
+			$idx = $idx + 1;
 			echo '<li class="work-position">';
            		echo '<h5>' . $jobs[$idx]['title'] . '</h5>';
               		echo '<p>' . $jobs[$idx]['description'] . '</p>';
