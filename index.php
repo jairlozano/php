@@ -6,18 +6,20 @@ $jobs = [
 		'description' => 'This is an awesome job!!!'
 	],
 	[
-		'title' => 'Python Dev'
+		'title' => 'Python Dev',
+		'description' => 'This is an awesome language!!!'
 	],
 	[
-		'title' => 'DevOps'
+		'title' => 'DevOps',
+		'description' => 'This is an awesome job!!!'
 	]
 ];
-$var1 = 1;
-if($var1 > 2) {
-	echo 'Es mayor que 2';
-} else {
-	echo "$var1 no es mayor que 2";
-}
+//$var1 = 1;
+//if($var1 > 2) {
+//	echo 'Es mayor que 2';
+//} else {
+//	echo "$var1 no es mayor que 2";
+//}
 ?>
 <!doctype html>
 <html lang="en">
