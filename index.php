@@ -72,16 +72,15 @@ $jobs = [
 		for($idx = 0;$idx < count($jobs);$idx++) {
 			$idx = $idx + 1;
 			echo '<li class="work-position">';
-           		echo '<h5>' . $jobs[$idx]['title'] . '</h5>';
-              		echo '<p>' . $jobs[$idx]['description'] . '</p>';
-              		echo '<strong>Achievements:</strong>';
-              		echo '<ul>';
-                	echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-                	echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-                	echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-              		echo '</ul>';
-            		echo '</li>';
-
+      echo '<h5>' . $jobs[$idx]['title'] . '</h5>';
+      echo '<p>' . $jobs[$idx]['description'] . '</p>';
+      echo '<strong>Achievements:</strong>';
+      echo '<ul>';
+      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo '</ul>';
+      echo '</li>';
 		}
 	    ?>
           </ul>
