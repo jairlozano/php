@@ -1,25 +1,7 @@
 <?php
+require_once('jobs.php');
 $name = "Hector Benitez";
-$jobs = [
-	[
-		'title' => 'PHP Developer',
-		'description' => 'This is an awesome job!!!'
-	],
-	[
-		'title' => 'Python Dev',
-		'description' => 'This is an awesome language!!!'
-	],
-	[
-		'title' => 'DevOps',
-		'description' => 'This is an awesome job!!!'
-	]
-];
-//$var1 = 1;
-//if($var1 > 2) {
-//	echo 'Es mayor que 2';
-//} else {
-//	echo "$var1 no es mayor que 2";
-//}
+$limitMonths = 2000;
 ?>
 <!doctype html>
 <html lang="en">
@@ -69,18 +51,14 @@ $jobs = [
           <h3 class="border-bottom-gray" >Work Experience</h3>
 	  <ul>
 	    <?php
-		for($idx = 0;$idx < count($jobs);$idx++) {
-			echo '<li class="work-position">';
-      echo '<h5>' . $jobs[$idx]['title'] . '</h5>';
-      echo '<p>' . $jobs[$idx]['description'] . '</p>';
-      echo '<strong>Achievements:</strong>';
-      echo '<ul>';
-      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-      echo '</ul>';
-      echo '</li>';
-		}
+      $totalMonths = 0;
+      for($idx = 0;$idx < count($jobs);$idx++) {
+        $totalMonths += $jobs[$idx]['months'];
+        if ($totalMonths > $limitMonths) {
+          break;
+        }
+        printJob($jobs[$idx]);
+      }
 	    ?>
           </ul>
         </div>
