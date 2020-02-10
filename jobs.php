@@ -1,56 +1,36 @@
 <?php
 
+require 'app/Models/Job.php';
+require 'app/Models/Project.php';
+
+$job1 = new Job('PHP Developer','This is an awesome job!!!');
+$job1->months = 16;
+
+$job2 = new Job('Python Developer','This is an awesome job!!!');
+$job2->months = 24;
+
+$job3 = new Job('DevOps','This is an awesome job!!!');
+$job3->months = 32;
+
+$project1 = new Project('Project 1',,'Description 1');
+
 $jobs = [
-	[
-	'title' => 'PHP Developer',
-    'description' => 'This is an awesome job!!!',
-    'visible' => true,
-    'months' => 16
-	],
-	[
-	'title' => 'Python Dev',
-    'description' => 'This is an awesome language!!!',
-    'visible' => false,
-    'months' => 14
-	],
-	[
-	'title' => 'DevOps',
-    'description' => 'This is an awesome job!!!',
-    'visible' => false,
-    'months' => 5
-	],
-	[
-	'title' => 'Node Dev',
-    'description' => 'This is an awesome job!!!',
-    'visible' => true,
-    'months' => 24
-	],
-	[
-	'title' => 'Frontend Dev',
-    'description' => 'This is an awesome job!!!',
-    'visible' => true,
-    'months' => 3
-	]
+    $job1,
+    $job2,
+    $job3
 ];
-function getDuration($months){
-    $years = floor($months / 12);
-    $extraMonths = $months % 12;
-    if($years == 0){
-      return "$extraMonths month(s)";
-    }else if($extraMonths == 0){
-      return "$years year(s)";
-    }else{
-      return "$years year(s) $extraMonths months";
-    }
-  }
-  function printJob($job){
-    if($job['visible'] != true) {
-      return;
+$projects = [
+    $project1
+];
+
+function printElement($job){
+if($job->visible != true) {
+    return;
     }
     echo '<li class="work-position">';
-    echo '<h5>' . $job['title'] . '</h5>';
-    echo '<p>' . $job['description'] . '</p>';
-    echo '<p>' . getDuration($job['months']) . '</p>';
+    echo '<h5>' . $job->getTitle() . '</h5>';
+    echo '<p>' . $job->description . '</p>';
+    echo '<p>' . $job->getDurationAsString() . '</p>';
     echo '<strong>Achievements:</strong>';
     echo '<ul>';
     echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
@@ -58,4 +38,4 @@ function getDuration($months){
     echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
     echo '</ul>';
     echo '</li>';
-  }
+}

@@ -53,11 +53,11 @@ $limitMonths = 2000;
 	    <?php
       $totalMonths = 0;
       for($idx = 0;$idx < count($jobs);$idx++) {
-        $totalMonths += $jobs[$idx]['months'];
+        $totalMonths += $jobs[$idx]->months;
         if ($totalMonths > $limitMonths) {
           break;
         }
-        printJob($jobs[$idx]);
+        printElement($jobs[$idx]);
       }
 	    ?>
           </ul>
