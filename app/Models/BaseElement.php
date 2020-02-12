@@ -1,7 +1,7 @@
 <?php
 
 class BaseElement {
-    private $title;
+    protected $title;
     public $description;
     public $visible = true;
     public $months;

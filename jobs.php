@@ -12,7 +12,7 @@ $job2->months = 24;
 $job3 = new Job('DevOps','This is an awesome job!!!');
 $job3->months = 32;
 
-$project1 = new Project('Project 1',,'Description 1');
+$project1 = new Project('Project 1','Description 1');
 
 $jobs = [
     $job1,
